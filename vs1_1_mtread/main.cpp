@@ -8,9 +8,18 @@
 #include "libarff/arff_parser.h"
 #include "libarff/arff_data.h"
 #include <bits/stdc++.h>
-#include "mpi.h"
+#include <pthread.h>
 
 using namespace std;
+
+struct Escopo{
+	int k;
+	int id;
+	int n_threads;
+	ArffData* train;
+	ArffData* test;
+	int* predictions;
+} escopo;
 
 float distance(ArffInstance* a, ArffInstance* b) {
     float sum = 0;
@@ -24,49 +33,40 @@ float distance(ArffInstance* a, ArffInstance* b) {
     return sum;
 }
 
-int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
-    // Implements a sequential kNN where for each candidate query an in-place priority queue is maintained to identify the kNN's.
-    int n_instances = test->num_instances();
-    // Predictions is the array where you have to return the class predicted (integer) for the test dataset instances
-    int* predictions = (int*)malloc(test->num_instances() * sizeof(int));
+void *threadKNN(void *p)
+{
+	//?? n_instances
+    escopo p_escopo = (escopo) p;
+	
+    float* candidates = (float*) calloc(p_escopo.k*2, sizeof(float));
+    for(int i = 0; i < 2*p_escopo.k; i++){ candidates[i] = FLT_MAX; }
 
-    // Stores k-NN candidates for a query vector as a sorted 2d array. First element is inner product, second is class.
-    float* candidates = (float*) calloc(k*2, sizeof(float));
-    for(int i = 0; i < 2*k; i++){ candidates[i] = FLT_MAX; }
-
-    int num_classes = train->num_classes();
-
-    // Stores bincounts of each class over the final set of candidate NN
+    int num_classes = p_escopo.train->num_classes();
+    int n_instances = p_escopo.test->num_instances();
+    
     int* classCounts = (int*)calloc(num_classes, sizeof(int));
 
-    int start = rank * n_instances / size;
-    int end = (rank+1) * n_instances / size;
-    if (rank == size -1) end = n_instances;
-    
-    //config to organize the process.
-    int n_instances_local = end - start;
-    int* local_predictions = (int*)malloc(n_instances_local * sizeof(int));
-    int j = 0;
-    
+    int start = p_escopo.id * n_instances / p_escopo.n_threads;
+    int end = (p_escopo.id+1) * n_instances / p_escopo.n_threads;
+    if (p_escopo.id == p_escopo.n_threads - 1) end = n_instances;
+
     for(int queryIndex = start; queryIndex < end; queryIndex++) {
-    	//printf("%d \n",queryIndex);
-        for(int keyIndex = 0; keyIndex < train->num_instances(); keyIndex++) {
-            
-            float dist = distance(test->get_instance(queryIndex), train->get_instance(keyIndex));
+        for(int keyIndex = 0; keyIndex < p_escopo.train->num_instances(); keyIndex++) {
+            float dist = distance(p_escopo.test->get_instance(queryIndex), p_escopo.train->get_instance(keyIndex));
 
             // Add to our candidates
-            for(int c = 0; c < k; c++){
+            for(int c = 0; c < p_escopo.k; c++){
                 if(dist < candidates[2*c]){
                     // Found a new candidate
                     // Shift previous candidates down by one
-                    for(int x = k-2; x >= c; x--) {
+                    for(int x = p_escopo.k-2; x >= c; x--) {
                         candidates[2*x+2] = candidates[2*x];
                         candidates[2*x+3] = candidates[2*x+1];
                     }
                     
                     // Set key vector as potential k NN
                     candidates[2*c] = dist;
-                    candidates[2*c+1] = train->get_instance(keyIndex)->get(train->num_attributes() - 1)->operator float(); // class value
+                    candidates[2*c+1] = p_escopo.train->get_instance(keyIndex)->get(p_escopo.train->num_attributes() - 1)->operator float(); // class value
 
                     break;
                 }
@@ -74,7 +74,7 @@ int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
         }
 
         // Bincount the candidate labels and pick the most common
-        for(int i = 0; i < k;i++){
+        for(int i = 0; i < p_escopo.k;i++){
             classCounts[(int)candidates[2*i+1]] += 1;
         }
         
@@ -87,15 +87,43 @@ int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
             }
         }
 
-        //predictions[queryIndex] = max_index;
-        local_predictions[j] = max_index;
-        j++;
-
-        for(int i = 0; i < 2*k; i++){ candidates[i] = FLT_MAX; }
+        p_escopo.predictions[queryIndex] = max_index;
+        
+        for(int i = 0; i < 2*p_escopo.k; i++){ candidates[i] = FLT_MAX; }
         memset(classCounts, 0, num_classes * sizeof(int));
     }
+    pthread_exit(NULL);
+}
+
+
+int* KNN(ArffData* train, ArffData* test, int k, int n_threads) {
+    // Implements a sequential kNN where for each candidate query an in-place priority queue is maintained to identify the kNN's.
     
-    MPI_Gather (local_predictions, n_instances_local, MPI_INT, predictions, n_instances_local, MPI_INT, 0, MPI_COMM_WORLD);
+    pthread_t *threads;
+    threads = (pthread_t*)malloc(n_threads * sizeof(pthread_t));
+    int* tids = (int*) malloc(n_threads * sizeof(int));
+    
+    int* predictions = (int*)malloc(test->num_instances() * sizeof(int));
+    
+    for(int i = 0; i < n_threads; i++){
+        tids[i] = i;
+    }
+    
+    for(int i = 0; i < n_threads; i++){
+    	escopo p_escopo;
+    	p_escopo.k = k;
+    	p_escopo.id = tids[i];
+    	p_escopo.n_threads = n_threads;
+    	p_escopo.train = train;
+    	p_escopo.test = test;
+    	p_escopo.predictions = predictions;
+    	
+        pthread_create(&threads[i], NULL, threadKNN, (void*) &p_escopo);
+    }
+      
+    for(int i = 0; i < n_threads; i++){
+        pthread_join(threads[i], NULL);  
+    }
     
     return predictions;
 }
@@ -128,19 +156,15 @@ float computeAccuracy(int* confusionMatrix, ArffData* dataset)
 }
 
 int main(int argc, char *argv[]){
-    
-    if(argc != 4)
+
+    if(argc != 5)
     {
-        cout << "Usage: n_process main datasets/trainfile.arff datasets/testfile.arff k" << endl;
+        cout << "Usage: ./main datasets/trainfile.arff datasets/testfile.arff k n_threads" << endl;
         exit(0);
     }
 
     int k = strtol(argv[3], NULL, 10);
-    
-    int rank, size;
-    MPI_Init(&argc,&argv);
-    MPI_Comm_rank (MPI_COMM_WORLD, &rank);
-    MPI_Comm_size (MPI_COMM_WORLD, &size);
+    int n_threads = strtol(argv[4], NULL, 10);
 
     // Open the datasets
     ArffParser parserTrain(argv[1]);
@@ -153,20 +177,16 @@ int main(int argc, char *argv[]){
     
     clock_gettime(CLOCK_MONOTONIC_RAW, &start);
     
-    predictions = KNN(train, test, k, rank, size);
+    predictions = KNN(train, test, k, n_threads);
     
     clock_gettime(CLOCK_MONOTONIC_RAW, &end);
 
-    if (rank == 0) 
-    {
-    	// Compute the confusion matrix
-    	int* confusionMatrix = computeConfusionMatrix(predictions, test);
-    	// Calculate the accuracy
-    	float accuracy = computeAccuracy(confusionMatrix, test);
+    // Compute the confusion matrix
+    int* confusionMatrix = computeConfusionMatrix(predictions, test);
+    // Calculate the accuracy
+    float accuracy = computeAccuracy(confusionMatrix, test);
 
-    	uint64_t diff = (1000000000L * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec) / 1e6;
+    uint64_t diff = (1000000000L * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec) / 1e6;
 
-    	printf("The %i-NN classifier for %lu test instances on %lu train instances required %llu ms CPU time. Accuracy was %.2f%%\n", k, test->num_instances(), train->num_instances(), (long long unsigned int) diff, (accuracy*100));
-    }
-    MPI_Finalize();
+    printf("The %i-NN classifier for %lu test instances on %lu train instances required %llu ms CPU time. Accuracy was %.2f%%\n", k, test->num_instances(), train->num_instances(), (long long unsigned int) diff, (accuracy*100));
 }
