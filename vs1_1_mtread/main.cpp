@@ -19,7 +19,7 @@ struct Escopo{
 	ArffData* train;
 	ArffData* test;
 	int* predictions;
-} escopo;
+};
 
 float distance(ArffInstance* a, ArffInstance* b) {
     float sum = 0;
@@ -35,11 +35,12 @@ float distance(ArffInstance* a, ArffInstance* b) {
 
 void *threadKNN(void *p)
 {
-	//?? n_instances
-    escopo p_escopo = (escopo) p;
+    Escopo p_escopo = *(Escopo*) p;
 	
     float* candidates = (float*) calloc(p_escopo.k*2, sizeof(float));
-    for(int i = 0; i < 2*p_escopo.k; i++){ candidates[i] = FLT_MAX; }
+    for(int i = 0; i < 2*p_escopo.k; i++){ 
+        candidates[i] = FLT_MAX; 
+    }
 
     int num_classes = p_escopo.train->num_classes();
     int n_instances = p_escopo.test->num_instances();
@@ -49,7 +50,7 @@ void *threadKNN(void *p)
     int start = p_escopo.id * n_instances / p_escopo.n_threads;
     int end = (p_escopo.id+1) * n_instances / p_escopo.n_threads;
     if (p_escopo.id == p_escopo.n_threads - 1) end = n_instances;
-
+    
     for(int queryIndex = start; queryIndex < end; queryIndex++) {
         for(int keyIndex = 0; keyIndex < p_escopo.train->num_instances(); keyIndex++) {
             float dist = distance(p_escopo.test->get_instance(queryIndex), p_escopo.train->get_instance(keyIndex));
@@ -66,7 +67,7 @@ void *threadKNN(void *p)
                     
                     // Set key vector as potential k NN
                     candidates[2*c] = dist;
-                    candidates[2*c+1] = p_escopo.train->get_instance(keyIndex)->get(p_escopo.train->num_attributes() - 1)->operator float(); // class value
+                    candidates[2*c+1] = p_escopo.train->get_instance(keyIndex)->get(p_escopo.train->num_attributes() - 1)->operator float();
 
                     break;
                 }
@@ -101,24 +102,22 @@ int* KNN(ArffData* train, ArffData* test, int k, int n_threads) {
     
     pthread_t *threads;
     threads = (pthread_t*)malloc(n_threads * sizeof(pthread_t));
-    int* tids = (int*) malloc(n_threads * sizeof(int));
+    //int* tids = (int*) malloc(n_threads * sizeof(int));
     
     int* predictions = (int*)malloc(test->num_instances() * sizeof(int));
+    Escopo* p_escopo = (Escopo*)malloc(n_threads * sizeof(Escopo));
     
     for(int i = 0; i < n_threads; i++){
-        tids[i] = i;
+        p_escopo[i].k = k;
+    	p_escopo[i].id = i;
+    	p_escopo[i].n_threads = n_threads;
+    	p_escopo[i].train = train;
+    	p_escopo[i].test = test;
+    	p_escopo[i].predictions = predictions;
     }
-    
+        
     for(int i = 0; i < n_threads; i++){
-    	escopo p_escopo;
-    	p_escopo.k = k;
-    	p_escopo.id = tids[i];
-    	p_escopo.n_threads = n_threads;
-    	p_escopo.train = train;
-    	p_escopo.test = test;
-    	p_escopo.predictions = predictions;
-    	
-        pthread_create(&threads[i], NULL, threadKNN, (void*) &p_escopo);
+        pthread_create(&threads[i], NULL, threadKNN, (void*) &p_escopo[i]);
     }
       
     for(int i = 0; i < n_threads; i++){
