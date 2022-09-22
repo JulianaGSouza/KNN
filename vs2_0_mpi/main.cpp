@@ -24,56 +24,49 @@ float distance(ArffInstance* a, ArffInstance* b) {
     return sum;
 }
 
+// Implements a sequential kNN where for each candidate query an in-place priority queue is maintained to identify the kNN's.
 int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
-    // Implements a sequential kNN where for each candidate query an in-place priority queue is maintained to identify the kNN's.
-    int n_instances = test->num_instances();
-    // Predictions is the array where you have to return the class predicted (integer) for the test dataset instances
-    int* predictions = (int*)malloc(test->num_instances() * sizeof(int));
-
-    // Stores k-NN candidates for a query vector as a sorted 2d array. First element is inner product, second is class.
-    float* candidates = (float*) calloc(k*2, sizeof(float));
-    for(int i = 0; i < 2*k; i++){ candidates[i] = FLT_MAX; }
-
+    
+    int num_instances = test->num_instances();
+    int num_virtual = (num_instances % size) + num_instances;
+    int num_local = num_virtual/size;
     int num_classes = train->num_classes();
-
-    // Stores bincounts of each class over the final set of candidate NN
+    
+    float* candidates = (float*) calloc(k*2, sizeof(float));
     int* classCounts = (int*)calloc(num_classes, sizeof(int));
+    int* predictions = (int*)malloc(num_virtual * sizeof(int));
+           
+    for(int i = 0; i < 2*k; i++){ 
+        candidates[i] = FLT_MAX; 
+    }
 
-    int start = rank * n_instances / size;
-    int end = (rank+1) * n_instances / size;
-    if (rank == size -1) end = n_instances;
+    int start = rank * num_local;
+    int end = start + num_local;
+    if (rank == size -1){
+    	end = num_instances;
+    }
+
+    int* local_predictions = (int*)malloc(num_local * sizeof(int));
     
-    //config to organize the process.
-    int n_instances_local = end - start;
-    int* local_predictions = (int*)malloc(n_instances_local * sizeof(int));
     int j = 0;
-    
+
     for(int queryIndex = start; queryIndex < end; queryIndex++) {
-    	//printf("%d \n",queryIndex);
         for(int keyIndex = 0; keyIndex < train->num_instances(); keyIndex++) {
-            
             float dist = distance(test->get_instance(queryIndex), train->get_instance(keyIndex));
 
-            // Add to our candidates
             for(int c = 0; c < k; c++){
                 if(dist < candidates[2*c]){
-                    // Found a new candidate
-                    // Shift previous candidates down by one
                     for(int x = k-2; x >= c; x--) {
                         candidates[2*x+2] = candidates[2*x];
                         candidates[2*x+3] = candidates[2*x+1];
                     }
-                    
-                    // Set key vector as potential k NN
                     candidates[2*c] = dist;
                     candidates[2*c+1] = train->get_instance(keyIndex)->get(train->num_attributes() - 1)->operator float(); // class value
-
                     break;
                 }
             }
         }
 
-        // Bincount the candidate labels and pick the most common
         for(int i = 0; i < k;i++){
             classCounts[(int)candidates[2*i+1]] += 1;
         }
@@ -87,7 +80,6 @@ int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
             }
         }
 
-        //predictions[queryIndex] = max_index;
         local_predictions[j] = max_index;
         j++;
 
@@ -95,8 +87,8 @@ int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
         memset(classCounts, 0, num_classes * sizeof(int));
     }
     
-    MPI_Gather (local_predictions, n_instances_local, MPI_INT, predictions, n_instances_local, MPI_INT, 0, MPI_COMM_WORLD);
-    
+    MPI_Gather (local_predictions, num_local, MPI_INT, predictions, num_local, MPI_INT, 0, MPI_COMM_WORLD);
+
     return predictions;
 }
 
