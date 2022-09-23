@@ -38,6 +38,6 @@ do
 	printf $file_size" 1 2 4 8 16 32 64 128\n" >> $log
 	for i in 1 2 4 8 16 32 64 128
 	do
-		echo mpiexec -oversubscribe -np $i vs2_0_MPI datasets/$file_size-train.arff datasets/$file_size-test.arff 3 >> $log
+		mpiexec -oversubscribe -np $i vs2_0_MPI datasets/$file_size-train.arff datasets/$file_size-test.arff 3 >> $log
 	done
 done

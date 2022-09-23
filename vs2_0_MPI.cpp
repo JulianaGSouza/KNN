@@ -28,10 +28,9 @@ float distance(ArffInstance* a, ArffInstance* b) {
 int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
     
     int num_instances = test->num_instances();
-    int num_virtual = (num_instances % size) + num_instances;
+    int num_virtual = ((num_instances / size) + 1) * size;
     int num_local = num_virtual/size;
     int num_classes = train->num_classes();
-    
     float* candidates = (float*) calloc(k*2, sizeof(float));
     int* classCounts = (int*)calloc(num_classes, sizeof(int));
     int* predictions = (int*)malloc(num_virtual * sizeof(int));
@@ -41,11 +40,13 @@ int* KNN(ArffData* train, ArffData* test, int k, int rank, int size) {
     }
 
     int start = rank * num_local;
-    int end = start + num_local;
-    if (rank == size -1){
+    int end = start + num_local; 
+
+    if (end > num_instances){
     	end = num_instances;
     }
-
+    
+    //printf("Start %d end %d num_local %d num_instances %d \n", start,end, num_local, num_instances);
     int* local_predictions = (int*)malloc(num_local * sizeof(int));
     
     int j = 0;
