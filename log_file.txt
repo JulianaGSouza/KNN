@@ -1,40 +1,40 @@
 KNN Compare 
 Sequential Version:
 small
-SEQUENTIAL:The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+SEQUENTIAL:The 3-NN classifier for 80 test instances on 592 train instances required 4 ms CPU time. Accuracy was 85.00%
 medium
-SEQUENTIAL:The 3-NN classifier for 370 test instances on 7354 train instances required 285 ms CPU time. Accuracy was 25.95%
+SEQUENTIAL:The 3-NN classifier for 370 test instances on 7354 train instances required 279 ms CPU time. Accuracy was 25.95%
 large
-SEQUENTIAL:The 3-NN classifier for 1718 test instances on 30803 train instances required 6329 ms CPU time. Accuracy was 99.48%
+SEQUENTIAL:The 3-NN classifier for 1718 test instances on 30803 train instances required 6249 ms CPU time. Accuracy was 99.48%
 
 Parallel version with OPenMP:
 small 1 2 4 8 16 32 64 128
-P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
-P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
-P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 0 ms CPU time. Accuracy was 85.00%
 P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
 P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
 medium 1 2 4 8 16 32 64 128
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 287 ms CPU time. Accuracy was 25.95%
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 154 ms CPU time. Accuracy was 25.95%
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 75 ms CPU time. Accuracy was 25.95%
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 77 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 280 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 142 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 76 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 67 ms CPU time. Accuracy was 25.95%
 P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 44 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 47 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 43 ms CPU time. Accuracy was 25.95%
 P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 42 ms CPU time. Accuracy was 25.95%
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 41 ms CPU time. Accuracy was 25.95%
-P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 40 ms CPU time. Accuracy was 25.95%
 large 1 2 4 8 16 32 64 128
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 6124 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 3279 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1969 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1437 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1026 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 935 ms CPU time. Accuracy was 99.48%
-P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 935 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 6497 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 3319 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 2024 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1564 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1069 ms CPU time. Accuracy was 99.48%
 P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 972 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 971 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 926 ms CPU time. Accuracy was 99.48%
 
 Parallel version with Threads:
 small 1 2 4 8 16 32 64 128
@@ -44,23 +44,52 @@ P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances requ
 P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
-P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
 medium 1 2 4 8 16 32 64 128
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 289 ms CPU time. Accuracy was 25.95%
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 141 ms CPU time. Accuracy was 25.95%
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 74 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 300 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 151 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 76 ms CPU time. Accuracy was 25.95%
 P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 60 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 40 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 44 ms CPU time. Accuracy was 25.95%
 P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 41 ms CPU time. Accuracy was 25.95%
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 39 ms CPU time. Accuracy was 25.95%
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 38 ms CPU time. Accuracy was 25.95%
-P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 39 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 44 ms CPU time. Accuracy was 25.95%
 large 1 2 4 8 16 32 64 128
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 6113 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 3248 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1974 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1716 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1149 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1113 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1136 ms CPU time. Accuracy was 99.48%
-P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1100 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 6177 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 3214 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 2048 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1484 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 983 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 954 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 914 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1101 ms CPU time. Accuracy was 99.48%
+
+Parallel version with process - MPI:
+small 1 2 4 8 16 32 64 128
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 0 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 9 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 37 ms CPU time. Accuracy was 85.00%
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 18 ms CPU time. Accuracy was 85.00%
+medium 1 2 4 8 16 32 64 128
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 281 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 144 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 94 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 108 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 37 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 143 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 226 ms CPU time. Accuracy was 25.95%
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 429 ms CPU time. Accuracy was 25.95%
+large 1 2 4 8 16 32 64 128
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 6194 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 3532 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 2298 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 2052 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1782 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1193 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1181 ms CPU time. Accuracy was 99.48%
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 656 ms CPU time. Accuracy was 99.48%
