@@ -1,0 +1,172 @@
+MAPLE
+
+./vs0_0_sequencial datasets/small-train.arff datasets/small-test.arff 3
+SEQUENTIAL:The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+
+./vs0_0_sequencial datasets/medium-train.arff datasets/medium-test.arff 3
+SEQUENTIAL:The 3-NN classifier for 370 test instances on 7354 train instances required 614 ms CPU time. Accuracy was 25.95%
+
+./vs0_0_sequencial datasets/large-train.arff datasets/large-test.arff 3
+SEQUENTIAL:The 3-NN classifier for 1718 test instances on 30803 train instances required 11637 ms CPU time. Accuracy was 99.48%
+
+
+
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 1
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 2
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 4
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 8
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 16
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 32
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 64
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+./vs1_0_OpenMP datasets/small-train.arff datasets/small-test.arff 3 128
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 4 ms CPU time. Accuracy was 85.00%
+
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 1
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 622 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 2
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 313 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 4
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 170 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 8
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 86 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 16
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 43 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 32
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 38 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 64
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 40 ms CPU time. Accuracy was 25.95%
+./vs1_0_OpenMP datasets/medium-train.arff datasets/medium-test.arff 3 128
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 39 ms CPU time. Accuracy was 25.95%
+
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 1
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 11861 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 2
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 6082 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 4
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 3180 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 8
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1798 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 16
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 879 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 32
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 627 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 64
+[desouzajg@maple code]$ ./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 64
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 498 ms CPU time. Accuracy was 99.48%
+./vs1_0_OpenMP datasets/large-train.arff datasets/large-test.arff 3 128
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 513 ms CPU time. Accuracy was 99.48%
+
+
+
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 1
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 2
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 4
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 8
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 16
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 32
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 64
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/small-train.arff datasets/small-test.arff 3 128
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 1
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 617 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 2
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 295 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 4
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 168 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 8
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 86 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 16
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 45 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 32
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 39 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 64
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 33 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/medium-train.arff datasets/medium-test.arff 3 128
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 26 ms CPU time. Accuracy was 25.95%
+
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 1
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 11857 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 2
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 6115 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 4
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 3335 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 8
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1693 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 16
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 859 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 32
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 607 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 64
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 485 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ ./vs1_1_threads datasets/large-train.arff datasets/large-test.arff 3 128
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 434 ms CPU time. Accuracy was 99.48%
+
+
+
+
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 1 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 2 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 4 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 8 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 16 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 32 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 1 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 64 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 14 ms CPU time. Accuracy was 85.00%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 128 vs2_0_MPI datasets/small-train.arff datasets/small-test.arff 3
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 31 ms CPU time. Accuracy was 85.00%
+
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 1 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 589 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 2 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 298 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 4 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 162 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 8 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 100 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 16 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 91 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 32 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 52 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 64 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 160 ms CPU time. Accuracy was 25.95%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 128 vs2_0_MPI datasets/medium-train.arff datasets/medium-test.arff 3
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 139 ms CPU time. Accuracy was 25.95%
+
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 1 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 11757 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 2 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 6802 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 4 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 4000 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 8 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1961 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 16 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1300 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 32 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1112 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 64 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 871 ms CPU time. Accuracy was 99.48%
+[desouzajg@maple code]$ mpiexec -oversubscribe -np 128 vs2_0_MPI datasets/large-train.arff datasets/large-test.arff 3
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 450 ms CPU time. Accuracy was 99.48%
+

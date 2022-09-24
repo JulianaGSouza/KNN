@@ -1,0 +1,719 @@
+KNN Compare 
+Sequential Version:
+small
+SEQUENTIAL:The 3-NN classifier for 80 test instances on 592 train instances required 11 ms CPU time. Accuracy was 85.00%
+medium
+SEQUENTIAL:The 3-NN classifier for 370 test instances on 7354 train instances required 1146 ms CPU time. Accuracy was 25.95%
+large
+SEQUENTIAL:The 3-NN classifier for 1718 test instances on 30803 train instances required 34996 ms CPU time. Accuracy was 99.48%
+
+Parallel version with OPenMP:
+small 1 2 4 8 16 32 64 128
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 6 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 6 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 5 ms CPU time. Accuracy was 85.00%
+P_OpenMP  :The 3-NN classifier for 80 test instances on 592 train instances required 29 ms CPU time. Accuracy was 85.00%
+medium 1 2 4 8 16 32 64 128
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 617 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 507 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 271 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 139 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 73 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 41 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 34 ms CPU time. Accuracy was 25.95%
+P_OpenMP  :The 3-NN classifier for 370 test instances on 7354 train instances required 47 ms CPU time. Accuracy was 25.95%
+large 1 2 4 8 16 32 64 128
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 45140 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 24047 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 10129 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 3233 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 2840 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 1383 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 814 ms CPU time. Accuracy was 99.48%
+P_OpenMP  :The 3-NN classifier for 1718 test instances on 30803 train instances required 632 ms CPU time. Accuracy was 99.48%
+
+Parallel version with Threads:
+small 1 2 4 8 16 32 64 128
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 12 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 6 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 2 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 3 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 4 ms CPU time. Accuracy was 85.00%
+P_THREADS :The 3-NN classifier for 80 test instances on 592 train instances required 8 ms CPU time. Accuracy was 85.00%
+medium 1 2 4 8 16 32 64 128
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 871 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 512 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 258 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 141 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 74 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 54 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 35 ms CPU time. Accuracy was 25.95%
+P_THREADS :The 3-NN classifier for 370 test instances on 7354 train instances required 25 ms CPU time. Accuracy was 25.95%
+large 1 2 4 8 16 32 64 128
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 59051 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 21399 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 8470 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 2878 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 2488 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 1728 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 791 ms CPU time. Accuracy was 99.48%
+P_THREADS :The 3-NN classifier for 1718 test instances on 30803 train instances required 419 ms CPU time. Accuracy was 99.48%
+
+Parallel version with process - MPI:
+small 1 2 4 8 16 32 64 128
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 12 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 6 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 6 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 11 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 7 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 14 ms CPU time. Accuracy was 85.00%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 80 test instances on 592 train instances required 14 ms CPU time. Accuracy was 85.00%
+medium 1 2 4 8 16 32 64 128
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 925 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 901 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 288 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 218 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 176 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 39 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 89 ms CPU time. Accuracy was 25.95%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 370 test instances on 7354 train instances required 172 ms CPU time. Accuracy was 25.95%
+large 1 2 4 8 16 32 64 128
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 37878 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 18620 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 9207 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1903 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1990 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 1723 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 759 ms CPU time. Accuracy was 99.48%
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            compile
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: compile
+--------------------------------------------------------------------------
+P_MPI     :The 3-NN classifier for 1718 test instances on 30803 train instances required 841 ms CPU time. Accuracy was 99.48%
