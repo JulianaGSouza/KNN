@@ -1,4 +1,3 @@
-# 2022-603-A1-V01007581
-High-Performance Distributed Systems
+# KNN - High-Performance Distributed Systems
 
-This version of the KNN algorithm uses Mult-thread and OpenMP.
+This repository contains different versions of the KNN algorithm in order to investigate parallel and distributed approaches. 
